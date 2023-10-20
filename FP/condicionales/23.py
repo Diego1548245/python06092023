@@ -1,17 +1,28 @@
 import os
 os.system("cls")
 
-notamate = int(input("Notas en Matemáticas: "))
-notafisica = int(input("Notas en Física: "))
+matematicas = int(input("Notas en Matemáticas: "))
+fisica = int(input("Notas en Física: "))
 
-if notamate > 17 : propina1 = 3 * notamate
-else : propina1 = 1 * notamate
+#if matematicas > 17 : propina = 3 * matematicas
+#else : propina = matematicas
+#
+#if fisica > 15 : propina = 2 * fisica
+#else : propina = 0.5 * fisica
 
-if notafisica > 15 : propina2 = 2 * notafisica
-else : propina2 = 0.5 * notafisica
+#forma corta:
+propina = matematicas + fisica/2
+if propina > 17 : propina += 2 * matematicas
+if fisica > 15 : propina += fisica * 1.5
 
-if (notafisica + notamate)/2 > 16 : obsequio = "Reloj"
-else : obsequio = "Nada"
+#if (fisica + matematicas)/2 > 16 : obsequio = "Reloj"
+#else : obsequio = "Nada"
 
-print(f"Propina:    s/{propina1+propina2:.2f}")
-print(f"Obsequio:   {obsequio}")
+#print(f"Propina:    s/{propina:.2f}")
+#print(f"Obsequio:   {obsequio}")
+
+#forma corta:
+promedio = (matematicas + fisica)/2
+print(f"Promedio:   {promedio}")
+print(f"Propina :   {propina}")
+print(f"Obsequio:   {'Si' if promedio > 16 else 'No'}")
