@@ -15,4 +15,3 @@ else : obsequio = "Nada"
 
 print(f"Propina:    s/{propina1+propina2:.2f}")
 print(f"Obsequio:   {obsequio}")
-Fal
